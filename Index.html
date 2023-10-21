@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phantom's Store - Página Inicial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Phantom's Store</h1>
+        <p>Sua Fonte Exclusiva de Godlys</p>
+    </header><br><br>
+
+    <div class="container">
+        <div class="message-box" id="messageDiv">
+            <h2>Você não tem nenhum convite disponível, Espere algum staff da Phantom's liberar o convite</h2>
+            <h3>Isso pode demorar 15 segundos, não reinicie a página!</h3>
+        </div>
+        <div class="message-box" id="ctaButtonDiv" style="display: none;">
+            <h2>Você foi convidado para ser patrocinado pela Phantom's Store</h2>
+            <h3>CONVITE DE: yMeduzx</h3>
+            <a class="cta-button" href="preparando.html">Ebaa, Quero continuar</a>
+        </div>
+    </div>
+    
+    <script>
+        // Altera a mensagem principal após 13.5 segundos
+        setTimeout(function() {
+            document.querySelector("#messageDiv h2").textContent = "Carregando Convites...";
+            document.querySelector("#messageDiv h3").style.display = "none"; // Oculta o <h3>
+        }, 14000);
+    
+        // Exibe a mensagem "Você foi convidado para ser patrocinado" após 15 segundos
+        setTimeout(function() {
+            document.getElementById("messageDiv").style.display = "none";
+            document.getElementById("ctaButtonDiv").style.display = "block";
+        }, 15500);
+    </script>
+    
+    
+    
+    
+    
+</body>
+</html>

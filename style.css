@@ -1,0 +1,60 @@
+/* Estilos CSS para a página de Preparando Patrocínio */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #383838;
+    margin: 0;
+    padding: 0;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 10;
+    }
+}
+
+.loading-text {
+    color: white;
+    text-align: center;
+    font-size: 84px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeIn 3s forwards; /* A animação dura 1.5 segundos e retém a última etapa */
+}
+
+.preparing-animation {
+    width: 100px;
+    height: 100px;
+    border-bottom: 4px solid white;
+    border-top: 6px solid #7ebcff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite, changeColor 5s infinite,  changeColor1 5s infinite; /* 5 segundos para mudar de cor */
+    margin: 20px auto;
+}
+
+@keyframes changeColor {
+    0% { border-top-color: #7ebcff; } /* Cor inicial */
+    50% { border-top-color: #3c70ff; } /* Nova cor */
+    100% { border-top-color: #007bff; } /* Cor original */
+
+}
+
+@keyframes changeColor1 {
+   
+    0% {    border-bottom-color: white; }
+    30% {      border-bottom-color: rgb(187, 187, 187); }
+    50% {      border-bottom-color: rgb(150, 150, 150); }
+    60% {      border-bottom-color: rgb(187, 187, 187); }
+    100% {      border-bottom-color: white; }
+    
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
